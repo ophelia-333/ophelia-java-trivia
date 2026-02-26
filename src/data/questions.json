@@ -1,0 +1,295 @@
+[
+  {
+    "id": "classes-1",
+    "subjectId": "classes",
+    "description": "O que é uma classe em Java?",
+    "alternatives": [
+      { "id": "A", "text": "Um objeto criado na memória durante a execução do programa" },
+      { "id": "B", "text": "Um modelo ou blueprint que define atributos e comportamentos de objetos" },
+      { "id": "C", "text": "Um método especial que inicializa variáveis" },
+      { "id": "D", "text": "Uma coleção de funções independentes" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Uma classe é um modelo (blueprint) que define atributos (dados) e métodos (comportamentos) que os objetos criados a partir dela terão."
+  },
+  {
+    "id": "classes-2",
+    "subjectId": "classes",
+    "description": "Como criar uma instância (objeto) de uma classe chamada 'Carro' em Java?",
+    "alternatives": [
+      { "id": "A", "text": "Carro meuCarro = Carro();" },
+      { "id": "B", "text": "Carro meuCarro = create Carro();" },
+      { "id": "C", "text": "Carro meuCarro = new Carro();" },
+      { "id": "D", "text": "new Carro meuCarro = Carro();" }
+    ],
+    "correctAlternative": "C",
+    "explanation": "Para criar um objeto em Java, usamos a palavra-chave 'new' seguida do nome da classe e parênteses: new Carro(). Isso chama o construtor da classe.",
+    "matter": {
+      "type": "code",
+      "content": "Carro meuCarro = new Carro();",
+      "language": "java"
+    }
+  },
+  {
+    "id": "classes-3",
+    "subjectId": "classes",
+    "description": "O que é um construtor em Java?",
+    "alternatives": [
+      { "id": "A", "text": "Um método que retorna um objeto do tipo da classe" },
+      { "id": "B", "text": "Um método especial com o mesmo nome da classe, sem tipo de retorno, usado para inicializar objetos" },
+      { "id": "C", "text": "Uma variável que armazena o estado inicial da classe" },
+      { "id": "D", "text": "Um bloco de código executado quando a classe é excluída da memória" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "O construtor é um método especial com o mesmo nome da classe e sem tipo de retorno (nem void). É chamado automaticamente ao criar um objeto com 'new'."
+  },
+  {
+    "id": "classes-4",
+    "subjectId": "classes",
+    "description": "Qual é a diferença entre um atributo e um método em uma classe?",
+    "alternatives": [
+      { "id": "A", "text": "Atributos são públicos e métodos são privados" },
+      { "id": "B", "text": "Não existe diferença; os dois são a mesma coisa" },
+      { "id": "C", "text": "Atributos representam os dados (estado) e métodos representam os comportamentos (ações)" },
+      { "id": "D", "text": "Métodos armazenam dados e atributos executam lógica" }
+    ],
+    "correctAlternative": "C",
+    "explanation": "Atributos (ou campos) guardam o estado de um objeto, como nome ou idade. Métodos definem o que o objeto pode fazer, como calcular ou exibir informações."
+  },
+  {
+    "id": "classes-5",
+    "subjectId": "classes",
+    "description": "O que acontece quando você usa a palavra-chave 'new' para criar um objeto?",
+    "alternatives": [
+      { "id": "A", "text": "O código da classe é apagado da memória" },
+      { "id": "B", "text": "O compilador verifica os erros de sintaxe" },
+      { "id": "C", "text": "Um novo espaço na memória é alocado e o construtor da classe é chamado" },
+      { "id": "D", "text": "A classe é copiada e renomeada" }
+    ],
+    "correctAlternative": "C",
+    "explanation": "A palavra-chave 'new' aloca memória para o novo objeto e chama o construtor da classe para inicializá-lo. O objeto passa a existir na memória heap."
+  },
+
+  {
+    "id": "return-1",
+    "subjectId": "return",
+    "description": "Qual é o propósito principal da palavra-chave 'return' em Java?",
+    "alternatives": [
+      { "id": "A", "text": "Encerrar o programa" },
+      { "id": "B", "text": "Encerrar a execução de um método e, opcionalmente, devolver um valor ao chamador" },
+      { "id": "C", "text": "Declarar o tipo de retorno de um método" },
+      { "id": "D", "text": "Repetir a execução de um método" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "'return' encerra imediatamente a execução do método e devolve um valor (se o método não for void) para quem o chamou. Nenhuma linha após o return é executada."
+  },
+  {
+    "id": "return-2",
+    "subjectId": "return",
+    "description": "O que acontece com o código escrito após uma instrução 'return' dentro de um método?",
+    "alternatives": [
+      { "id": "A", "text": "É executado normalmente após o retorno" },
+      { "id": "B", "text": "Gera um erro de compilação se não for acessível" },
+      { "id": "C", "text": "É ignorado silenciosamente" },
+      { "id": "D", "text": "É executado apenas se o valor retornado for nulo" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "O compilador Java detecta código inacessível ('unreachable code') após um 'return' e gera um erro de compilação. O código após 'return' nunca será executado.",
+    "matter": {
+      "type": "code",
+      "content": "int somar(int a, int b) {\n    return a + b;\n    System.out.println(\"Isso nunca executa!\"); // Erro de compilação\n}",
+      "language": "java"
+    }
+  },
+  {
+    "id": "return-3",
+    "subjectId": "return",
+    "description": "Um método declarado como 'int calcular()' deve obrigatoriamente:",
+    "alternatives": [
+      { "id": "A", "text": "Usar 'return void' ao final" },
+      { "id": "B", "text": "Retornar um valor do tipo int em todos os caminhos de execução" },
+      { "id": "C", "text": "Não ter nenhuma instrução return" },
+      { "id": "D", "text": "Retornar um valor do tipo String" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Quando um método declara um tipo de retorno (como int), todos os caminhos possíveis de execução devem ter um 'return' com um valor compatível com esse tipo."
+  },
+  {
+    "id": "return-4",
+    "subjectId": "return",
+    "description": "É possível um método ter mais de um 'return'?",
+    "alternatives": [
+      { "id": "A", "text": "Não, só pode haver um único return por método" },
+      { "id": "B", "text": "Sim, mas apenas em métodos void" },
+      { "id": "C", "text": "Sim, em diferentes condições (como dentro de if/else), mas apenas um será executado" },
+      { "id": "D", "text": "Sim, e todos eles serão executados em sequência" }
+    ],
+    "correctAlternative": "C",
+    "explanation": "Um método pode ter múltiplos 'return', geralmente em branches condicionais. Porém, ao atingir qualquer 'return', o método termina — apenas um é executado por chamada.",
+    "matter": {
+      "type": "code",
+      "content": "String classificar(int nota) {\n    if (nota >= 7) {\n        return \"Aprovado\";\n    } else {\n        return \"Reprovado\";\n    }\n}",
+      "language": "java"
+    }
+  },
+  {
+    "id": "return-5",
+    "subjectId": "return",
+    "description": "Qual das opções abaixo é um uso CORRETO de 'return' em um método que retorna int?",
+    "alternatives": [
+      { "id": "A", "text": "return \"dez\";" },
+      { "id": "B", "text": "return 10;" },
+      { "id": "C", "text": "return true;" },
+      { "id": "D", "text": "return;" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "O valor após 'return' deve ser compatível com o tipo de retorno declarado no método. Se o método retorna 'int', o valor retornado deve ser um inteiro, como 10."
+  },
+
+  {
+    "id": "void-1",
+    "subjectId": "void",
+    "description": "O que significa declarar um método como 'void' em Java?",
+    "alternatives": [
+      { "id": "A", "text": "O método retorna o valor zero" },
+      { "id": "B", "text": "O método não retorna nenhum valor" },
+      { "id": "C", "text": "O método é privado e não pode ser acessado" },
+      { "id": "D", "text": "O método pode retornar qualquer tipo de valor" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "'void' indica que o método executa uma ação, mas não retorna nenhum dado ao chamador. É usado quando o propósito do método é produzir um efeito, não calcular um valor."
+  },
+  {
+    "id": "void-2",
+    "subjectId": "void",
+    "description": "Um método 'void' pode conter uma instrução 'return'?",
+    "alternatives": [
+      { "id": "A", "text": "Não, isso causaria um erro de compilação" },
+      { "id": "B", "text": "Sim, mas apenas 'return;' sem nenhum valor, para encerrar o método antecipadamente" },
+      { "id": "C", "text": "Sim, e ele deve retornar null" },
+      { "id": "D", "text": "Sim, e pode retornar qualquer valor" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Métodos void podem usar 'return;' (sem valor) para encerrar a execução antes do fim do método. Retornar um valor em um método void causaria erro de compilação.",
+    "matter": {
+      "type": "code",
+      "content": "void verificar(int x) {\n    if (x < 0) {\n        return; // encerra o método sem retornar valor\n    }\n    System.out.println(\"Valor: \" + x);\n}",
+      "language": "java"
+    }
+  },
+  {
+    "id": "void-3",
+    "subjectId": "void",
+    "description": "Quando é adequado usar 'void' em vez de um tipo de retorno como 'int' ou 'String'?",
+    "alternatives": [
+      { "id": "A", "text": "Quando o método for muito complexo" },
+      { "id": "B", "text": "Quando o método executa uma ação (ex: exibir, salvar, enviar) sem precisar retornar um resultado" },
+      { "id": "C", "text": "Quando o método retorna mais de um valor" },
+      { "id": "D", "text": "Quando o método for um construtor" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Use 'void' quando o método realiza uma ação cujo resultado não precisa ser devolvido. Exemplos: imprimir na tela, salvar em arquivo, enviar dados para outro sistema."
+  },
+  {
+    "id": "void-4",
+    "subjectId": "void",
+    "description": "O que ocorre ao chamar um método 'void' em uma expressão de atribuição como: int x = meuMetodo();",
+    "alternatives": [
+      { "id": "A", "text": "x recebe o valor 0" },
+      { "id": "B", "text": "x recebe null" },
+      { "id": "C", "text": "Erro de compilação, pois void não pode ser atribuído a uma variável" },
+      { "id": "D", "text": "Funciona normalmente, mas x fica vazio" }
+    ],
+    "correctAlternative": "C",
+    "explanation": "Métodos void não retornam nenhum valor, portanto não podem ser usados em expressões de atribuição. O compilador gerará um erro pois não há valor para atribuir à variável."
+  },
+  {
+    "id": "void-5",
+    "subjectId": "void",
+    "description": "Qual das opções abaixo é um método void correto?",
+    "alternatives": [
+      { "id": "A", "text": "void exibir() { return \"Olá\"; }" },
+      { "id": "B", "text": "void exibir() { System.out.println(\"Olá\"); }" },
+      { "id": "C", "text": "int exibir() { System.out.println(\"Olá\"); }" },
+      { "id": "D", "text": "void exibir() { return 0; }" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Um método void deve executar ações sem retornar valores. System.out.println é um exemplo perfeito: ele exibe algo na tela, mas não precisa retornar nada ao chamador.",
+    "matter": {
+      "type": "code",
+      "content": "void exibir() {\n    System.out.println(\"Olá, mundo!\");\n}",
+      "language": "java"
+    }
+  },
+
+  {
+    "id": "oop-1",
+    "subjectId": "oop",
+    "description": "Quais são os quatro pilares da Programação Orientada a Objetos (OOP)?",
+    "alternatives": [
+      { "id": "A", "text": "Compilação, Execução, Depuração e Testes" },
+      { "id": "B", "text": "Encapsulamento, Herança, Polimorfismo e Abstração" },
+      { "id": "C", "text": "Classes, Objetos, Métodos e Atributos" },
+      { "id": "D", "text": "Variáveis, Loops, Condições e Funções" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Os quatro pilares da OOP são: Encapsulamento (proteger dados), Herança (reutilizar código), Polimorfismo (múltiplas formas) e Abstração (ocultar complexidade)."
+  },
+  {
+    "id": "oop-2",
+    "subjectId": "oop",
+    "description": "O que é encapsulamento em OOP?",
+    "alternatives": [
+      { "id": "A", "text": "A capacidade de uma classe herdar de outra" },
+      { "id": "B", "text": "A prática de ocultar os dados internos de um objeto, controlando o acesso através de métodos" },
+      { "id": "C", "text": "A criação de múltiplos objetos a partir de uma classe" },
+      { "id": "D", "text": "A capacidade de um método se chamar a si mesmo" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Encapsulamento é o princípio de proteger os dados de um objeto, tornando atributos privados e fornecendo métodos públicos (getters/setters) para acessá-los de forma controlada."
+  },
+  {
+    "id": "oop-3",
+    "subjectId": "oop",
+    "description": "O que é um objeto em OOP?",
+    "alternatives": [
+      { "id": "A", "text": "O mesmo que uma classe" },
+      { "id": "B", "text": "Uma instância concreta de uma classe, com estado e comportamento próprios" },
+      { "id": "C", "text": "Um método sem parâmetros" },
+      { "id": "D", "text": "Um arquivo de código Java" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Um objeto é uma instância concreta de uma classe. Enquanto a classe é o molde, o objeto é a 'coisa real' criada a partir desse molde, com seus próprios valores de atributos."
+  },
+  {
+    "id": "oop-4",
+    "subjectId": "oop",
+    "description": "Em Java, qual palavra-chave é usada para que uma classe herde de outra?",
+    "alternatives": [
+      { "id": "A", "text": "implements" },
+      { "id": "B", "text": "inherits" },
+      { "id": "C", "text": "extends" },
+      { "id": "D", "text": "super" }
+    ],
+    "correctAlternative": "C",
+    "explanation": "A palavra-chave 'extends' é usada para herança em Java: class Cachorro extends Animal {}. Isso permite que Cachorro herde atributos e métodos da classe Animal.",
+    "matter": {
+      "type": "code",
+      "content": "class Animal {\n    String nome;\n    void emitirSom() { }\n}\n\nclass Cachorro extends Animal {\n    void emitirSom() {\n        System.out.println(\"Au au!\");\n    }\n}",
+      "language": "java"
+    }
+  },
+  {
+    "id": "oop-5",
+    "subjectId": "oop",
+    "description": "O que é abstração em OOP?",
+    "alternatives": [
+      { "id": "A", "text": "Esconder o código-fonte do desenvolvedor" },
+      { "id": "B", "text": "Criar objetos sem usar classes" },
+      { "id": "C", "text": "Expor apenas as funcionalidades essenciais de um objeto, ocultando detalhes de implementação" },
+      { "id": "D", "text": "Converter um tipo de dado em outro" }
+    ],
+    "correctAlternative": "C",
+    "explanation": "Abstração significa mostrar apenas o que é necessário e esconder a complexidade interna. Por exemplo, ao usar System.out.println(), você não precisa saber como ele funciona internamente."
+  }
+]
