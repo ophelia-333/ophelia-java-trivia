@@ -2,222 +2,222 @@
   {
     "id": "classes-1",
     "subjectId": "classes",
-    "description": "O que é uma classe em Java?",
+    "description": "What is a class in Java?",
     "alternatives": [
-      { "id": "A", "text": "Um objeto criado na memória durante a execução do programa" },
-      { "id": "B", "text": "Um modelo ou blueprint que define atributos e comportamentos de objetos" },
-      { "id": "C", "text": "Um método especial que inicializa variáveis" },
-      { "id": "D", "text": "Uma coleção de funções independentes" }
+      { "id": "A", "text": "An object created in memory during program execution" },
+      { "id": "B", "text": "A blueprint that defines the attributes and behaviors of objects" },
+      { "id": "C", "text": "A special method that initializes variables" },
+      { "id": "D", "text": "A collection of independent functions" }
     ],
     "correctAlternative": "B",
-    "explanation": "Uma classe é um modelo (blueprint) que define atributos (dados) e métodos (comportamentos) que os objetos criados a partir dela terão."
+    "explanation": "A class is a blueprint that defines the attributes (data) and methods (behaviors) that objects created from it will have."
   },
   {
     "id": "classes-2",
     "subjectId": "classes",
-    "description": "Como criar uma instância (objeto) de uma classe chamada 'Carro' em Java?",
+    "description": "How do you create an instance (object) of a class called 'Car' in Java?",
     "alternatives": [
-      { "id": "A", "text": "Carro meuCarro = Carro();" },
-      { "id": "B", "text": "Carro meuCarro = create Carro();" },
-      { "id": "C", "text": "Carro meuCarro = new Carro();" },
-      { "id": "D", "text": "new Carro meuCarro = Carro();" }
+      { "id": "A", "text": "Car myCar = Car();" },
+      { "id": "B", "text": "Car myCar = create Car();" },
+      { "id": "C", "text": "Car myCar = new Car();" },
+      { "id": "D", "text": "new Car myCar = Car();" }
     ],
     "correctAlternative": "C",
-    "explanation": "Para criar um objeto em Java, usamos a palavra-chave 'new' seguida do nome da classe e parênteses: new Carro(). Isso chama o construtor da classe.",
+    "explanation": "To create an object in Java, use the 'new' keyword followed by the class name and parentheses: new Car(). This calls the class constructor.",
     "matter": {
       "type": "code",
-      "content": "Carro meuCarro = new Carro();",
+      "content": "Car myCar = new Car();",
       "language": "java"
     }
   },
   {
     "id": "classes-3",
     "subjectId": "classes",
-    "description": "O que é um construtor em Java?",
+    "description": "What is a constructor in Java?",
     "alternatives": [
-      { "id": "A", "text": "Um método que retorna um objeto do tipo da classe" },
-      { "id": "B", "text": "Um método especial com o mesmo nome da classe, sem tipo de retorno, usado para inicializar objetos" },
-      { "id": "C", "text": "Uma variável que armazena o estado inicial da classe" },
-      { "id": "D", "text": "Um bloco de código executado quando a classe é excluída da memória" }
+      { "id": "A", "text": "A method that returns an object of the class type" },
+      { "id": "B", "text": "A special method with the same name as the class, no return type, used to initialize objects" },
+      { "id": "C", "text": "A variable that stores the initial state of the class" },
+      { "id": "D", "text": "A block of code executed when the class is removed from memory" }
     ],
     "correctAlternative": "B",
-    "explanation": "O construtor é um método especial com o mesmo nome da classe e sem tipo de retorno (nem void). É chamado automaticamente ao criar um objeto com 'new'."
+    "explanation": "A constructor is a special method with the same name as the class and no return type (not even void). It is called automatically when an object is created with 'new'."
   },
   {
     "id": "classes-4",
     "subjectId": "classes",
-    "description": "Qual é a diferença entre um atributo e um método em uma classe?",
+    "description": "What is the difference between a field and a method in a class?",
     "alternatives": [
-      { "id": "A", "text": "Atributos são públicos e métodos são privados" },
-      { "id": "B", "text": "Não existe diferença; os dois são a mesma coisa" },
-      { "id": "C", "text": "Atributos representam os dados (estado) e métodos representam os comportamentos (ações)" },
-      { "id": "D", "text": "Métodos armazenam dados e atributos executam lógica" }
+      { "id": "A", "text": "Fields are public and methods are private" },
+      { "id": "B", "text": "There is no difference; they are the same thing" },
+      { "id": "C", "text": "Fields represent data (state) and methods represent behaviors (actions)" },
+      { "id": "D", "text": "Methods store data and fields execute logic" }
     ],
     "correctAlternative": "C",
-    "explanation": "Atributos (ou campos) guardam o estado de um objeto, como nome ou idade. Métodos definem o que o objeto pode fazer, como calcular ou exibir informações."
+    "explanation": "Fields (attributes) hold the state of an object, such as name or age. Methods define what the object can do, such as calculating or displaying information."
   },
   {
     "id": "classes-5",
     "subjectId": "classes",
-    "description": "O que acontece quando você usa a palavra-chave 'new' para criar um objeto?",
+    "description": "What happens when you use the 'new' keyword to create an object?",
     "alternatives": [
-      { "id": "A", "text": "O código da classe é apagado da memória" },
-      { "id": "B", "text": "O compilador verifica os erros de sintaxe" },
-      { "id": "C", "text": "Um novo espaço na memória é alocado e o construtor da classe é chamado" },
-      { "id": "D", "text": "A classe é copiada e renomeada" }
+      { "id": "A", "text": "The class code is erased from memory" },
+      { "id": "B", "text": "The compiler checks for syntax errors" },
+      { "id": "C", "text": "New memory is allocated and the class constructor is called" },
+      { "id": "D", "text": "The class is copied and renamed" }
     ],
     "correctAlternative": "C",
-    "explanation": "A palavra-chave 'new' aloca memória para o novo objeto e chama o construtor da classe para inicializá-lo. O objeto passa a existir na memória heap."
+    "explanation": "The 'new' keyword allocates memory for the new object and calls the class constructor to initialize it. The object then exists in heap memory."
   },
 
   {
     "id": "return-1",
     "subjectId": "return",
-    "description": "Qual é o propósito principal da palavra-chave 'return' em Java?",
+    "description": "What is the main purpose of the 'return' keyword in Java?",
     "alternatives": [
-      { "id": "A", "text": "Encerrar o programa" },
-      { "id": "B", "text": "Encerrar a execução de um método e, opcionalmente, devolver um valor ao chamador" },
-      { "id": "C", "text": "Declarar o tipo de retorno de um método" },
-      { "id": "D", "text": "Repetir a execução de um método" }
+      { "id": "A", "text": "To terminate the program" },
+      { "id": "B", "text": "To end a method's execution and optionally send a value back to the caller" },
+      { "id": "C", "text": "To declare the return type of a method" },
+      { "id": "D", "text": "To repeat a method's execution" }
     ],
     "correctAlternative": "B",
-    "explanation": "'return' encerra imediatamente a execução do método e devolve um valor (se o método não for void) para quem o chamou. Nenhuma linha após o return é executada."
+    "explanation": "'return' immediately ends the method's execution and sends a value (if the method is not void) back to the caller. No line after 'return' will execute."
   },
   {
     "id": "return-2",
     "subjectId": "return",
-    "description": "O que acontece com o código escrito após uma instrução 'return' dentro de um método?",
+    "description": "What happens to code written after a 'return' statement inside a method?",
     "alternatives": [
-      { "id": "A", "text": "É executado normalmente após o retorno" },
-      { "id": "B", "text": "Gera um erro de compilação se não for acessível" },
-      { "id": "C", "text": "É ignorado silenciosamente" },
-      { "id": "D", "text": "É executado apenas se o valor retornado for nulo" }
+      { "id": "A", "text": "It executes normally after the return" },
+      { "id": "B", "text": "It causes a compilation error if it is unreachable" },
+      { "id": "C", "text": "It is silently ignored" },
+      { "id": "D", "text": "It only executes if the returned value is null" }
     ],
     "correctAlternative": "B",
-    "explanation": "O compilador Java detecta código inacessível ('unreachable code') após um 'return' e gera um erro de compilação. O código após 'return' nunca será executado.",
+    "explanation": "The Java compiler detects unreachable code after a 'return' statement and generates a compilation error. Code after 'return' will never execute.",
     "matter": {
       "type": "code",
-      "content": "int somar(int a, int b) {\n    return a + b;\n    System.out.println(\"Isso nunca executa!\"); // Erro de compilação\n}",
+      "content": "int add(int a, int b) {\n    return a + b;\n    System.out.println(\"This never runs!\"); // Compilation error\n}",
       "language": "java"
     }
   },
   {
     "id": "return-3",
     "subjectId": "return",
-    "description": "Um método declarado como 'int calcular()' deve obrigatoriamente:",
+    "description": "A method declared as 'int calculate()' must:",
     "alternatives": [
-      { "id": "A", "text": "Usar 'return void' ao final" },
-      { "id": "B", "text": "Retornar um valor do tipo int em todos os caminhos de execução" },
-      { "id": "C", "text": "Não ter nenhuma instrução return" },
-      { "id": "D", "text": "Retornar um valor do tipo String" }
+      { "id": "A", "text": "Use 'return void' at the end" },
+      { "id": "B", "text": "Return an int value on every possible execution path" },
+      { "id": "C", "text": "Have no return statement" },
+      { "id": "D", "text": "Return a String value" }
     ],
     "correctAlternative": "B",
-    "explanation": "Quando um método declara um tipo de retorno (como int), todos os caminhos possíveis de execução devem ter um 'return' com um valor compatível com esse tipo."
+    "explanation": "When a method declares a return type (such as int), every possible execution path must have a 'return' statement with a value compatible with that type."
   },
   {
     "id": "return-4",
     "subjectId": "return",
-    "description": "É possível um método ter mais de um 'return'?",
+    "description": "Can a method have more than one 'return' statement?",
     "alternatives": [
-      { "id": "A", "text": "Não, só pode haver um único return por método" },
-      { "id": "B", "text": "Sim, mas apenas em métodos void" },
-      { "id": "C", "text": "Sim, em diferentes condições (como dentro de if/else), mas apenas um será executado" },
-      { "id": "D", "text": "Sim, e todos eles serão executados em sequência" }
+      { "id": "A", "text": "No, there can only be one return per method" },
+      { "id": "B", "text": "Yes, but only in void methods" },
+      { "id": "C", "text": "Yes, in different conditions (like inside if/else), but only one will execute per call" },
+      { "id": "D", "text": "Yes, and all of them will execute in sequence" }
     ],
     "correctAlternative": "C",
-    "explanation": "Um método pode ter múltiplos 'return', geralmente em branches condicionais. Porém, ao atingir qualquer 'return', o método termina — apenas um é executado por chamada.",
+    "explanation": "A method can have multiple 'return' statements, usually in conditional branches. However, reaching any 'return' ends the method — only one executes per call.",
     "matter": {
       "type": "code",
-      "content": "String classificar(int nota) {\n    if (nota >= 7) {\n        return \"Aprovado\";\n    } else {\n        return \"Reprovado\";\n    }\n}",
+      "content": "String classify(int grade) {\n    if (grade >= 7) {\n        return \"Passed\";\n    } else {\n        return \"Failed\";\n    }\n}",
       "language": "java"
     }
   },
   {
     "id": "return-5",
     "subjectId": "return",
-    "description": "Qual das opções abaixo é um uso CORRETO de 'return' em um método que retorna int?",
+    "description": "Which of the following is a CORRECT use of 'return' in a method that returns int?",
     "alternatives": [
-      { "id": "A", "text": "return \"dez\";" },
+      { "id": "A", "text": "return \"ten\";" },
       { "id": "B", "text": "return 10;" },
       { "id": "C", "text": "return true;" },
       { "id": "D", "text": "return;" }
     ],
     "correctAlternative": "B",
-    "explanation": "O valor após 'return' deve ser compatível com o tipo de retorno declarado no método. Se o método retorna 'int', o valor retornado deve ser um inteiro, como 10."
+    "explanation": "The value after 'return' must be compatible with the declared return type. If the method returns 'int', the returned value must be an integer, such as 10."
   },
 
   {
     "id": "void-1",
     "subjectId": "void",
-    "description": "O que significa declarar um método como 'void' em Java?",
+    "description": "What does declaring a method as 'void' mean in Java?",
     "alternatives": [
-      { "id": "A", "text": "O método retorna o valor zero" },
-      { "id": "B", "text": "O método não retorna nenhum valor" },
-      { "id": "C", "text": "O método é privado e não pode ser acessado" },
-      { "id": "D", "text": "O método pode retornar qualquer tipo de valor" }
+      { "id": "A", "text": "The method returns zero" },
+      { "id": "B", "text": "The method does not return any value" },
+      { "id": "C", "text": "The method is private and cannot be accessed" },
+      { "id": "D", "text": "The method can return any type of value" }
     ],
     "correctAlternative": "B",
-    "explanation": "'void' indica que o método executa uma ação, mas não retorna nenhum dado ao chamador. É usado quando o propósito do método é produzir um efeito, não calcular um valor."
+    "explanation": "'void' indicates that the method performs an action but does not return any data to the caller. Use it when the method's purpose is to produce an effect, not compute a value."
   },
   {
     "id": "void-2",
     "subjectId": "void",
-    "description": "Um método 'void' pode conter uma instrução 'return'?",
+    "description": "Can a 'void' method contain a 'return' statement?",
     "alternatives": [
-      { "id": "A", "text": "Não, isso causaria um erro de compilação" },
-      { "id": "B", "text": "Sim, mas apenas 'return;' sem nenhum valor, para encerrar o método antecipadamente" },
-      { "id": "C", "text": "Sim, e ele deve retornar null" },
-      { "id": "D", "text": "Sim, e pode retornar qualquer valor" }
+      { "id": "A", "text": "No, that would cause a compilation error" },
+      { "id": "B", "text": "Yes, but only 'return;' with no value, to exit the method early" },
+      { "id": "C", "text": "Yes, and it must return null" },
+      { "id": "D", "text": "Yes, and it can return any value" }
     ],
     "correctAlternative": "B",
-    "explanation": "Métodos void podem usar 'return;' (sem valor) para encerrar a execução antes do fim do método. Retornar um valor em um método void causaria erro de compilação.",
+    "explanation": "Void methods can use 'return;' (without a value) to exit early. Returning a value in a void method causes a compilation error.",
     "matter": {
       "type": "code",
-      "content": "void verificar(int x) {\n    if (x < 0) {\n        return; // encerra o método sem retornar valor\n    }\n    System.out.println(\"Valor: \" + x);\n}",
+      "content": "void check(int x) {\n    if (x < 0) {\n        return; // exits the method without returning a value\n    }\n    System.out.println(\"Value: \" + x);\n}",
       "language": "java"
     }
   },
   {
     "id": "void-3",
     "subjectId": "void",
-    "description": "Quando é adequado usar 'void' em vez de um tipo de retorno como 'int' ou 'String'?",
+    "description": "When is it appropriate to use 'void' instead of a return type like 'int' or 'String'?",
     "alternatives": [
-      { "id": "A", "text": "Quando o método for muito complexo" },
-      { "id": "B", "text": "Quando o método executa uma ação (ex: exibir, salvar, enviar) sem precisar retornar um resultado" },
-      { "id": "C", "text": "Quando o método retorna mais de um valor" },
-      { "id": "D", "text": "Quando o método for um construtor" }
+      { "id": "A", "text": "When the method is very complex" },
+      { "id": "B", "text": "When the method performs an action (e.g., display, save, send) without needing to return a result" },
+      { "id": "C", "text": "When the method returns more than one value" },
+      { "id": "D", "text": "When the method is a constructor" }
     ],
     "correctAlternative": "B",
-    "explanation": "Use 'void' quando o método realiza uma ação cujo resultado não precisa ser devolvido. Exemplos: imprimir na tela, salvar em arquivo, enviar dados para outro sistema."
+    "explanation": "Use 'void' when the method performs an action whose result doesn't need to be returned. Examples: printing to the screen, saving to a file, sending data to another system."
   },
   {
     "id": "void-4",
     "subjectId": "void",
-    "description": "O que ocorre ao chamar um método 'void' em uma expressão de atribuição como: int x = meuMetodo();",
+    "description": "What happens when you call a 'void' method in an assignment expression like: int x = myMethod();",
     "alternatives": [
-      { "id": "A", "text": "x recebe o valor 0" },
-      { "id": "B", "text": "x recebe null" },
-      { "id": "C", "text": "Erro de compilação, pois void não pode ser atribuído a uma variável" },
-      { "id": "D", "text": "Funciona normalmente, mas x fica vazio" }
+      { "id": "A", "text": "x receives the value 0" },
+      { "id": "B", "text": "x receives null" },
+      { "id": "C", "text": "Compilation error, because void cannot be assigned to a variable" },
+      { "id": "D", "text": "It works normally, but x is empty" }
     ],
     "correctAlternative": "C",
-    "explanation": "Métodos void não retornam nenhum valor, portanto não podem ser usados em expressões de atribuição. O compilador gerará um erro pois não há valor para atribuir à variável."
+    "explanation": "Void methods return no value, so they cannot be used in assignment expressions. The compiler will throw an error because there is nothing to assign to the variable."
   },
   {
     "id": "void-5",
     "subjectId": "void",
-    "description": "Qual das opções abaixo é um método void correto?",
+    "description": "Which of the following is a correct void method?",
     "alternatives": [
-      { "id": "A", "text": "void exibir() { return \"Olá\"; }" },
-      { "id": "B", "text": "void exibir() { System.out.println(\"Olá\"); }" },
-      { "id": "C", "text": "int exibir() { System.out.println(\"Olá\"); }" },
-      { "id": "D", "text": "void exibir() { return 0; }" }
+      { "id": "A", "text": "void display() { return \"Hello\"; }" },
+      { "id": "B", "text": "void display() { System.out.println(\"Hello\"); }" },
+      { "id": "C", "text": "int display() { System.out.println(\"Hello\"); }" },
+      { "id": "D", "text": "void display() { return 0; }" }
     ],
     "correctAlternative": "B",
-    "explanation": "Um método void deve executar ações sem retornar valores. System.out.println é um exemplo perfeito: ele exibe algo na tela, mas não precisa retornar nada ao chamador.",
+    "explanation": "A void method must perform actions without returning a value. System.out.println is a perfect example: it displays something on screen but returns nothing to the caller.",
     "matter": {
       "type": "code",
-      "content": "void exibir() {\n    System.out.println(\"Olá, mundo!\");\n}",
+      "content": "void display() {\n    System.out.println(\"Hello, world!\");\n}",
       "language": "java"
     }
   },
@@ -225,46 +225,46 @@
   {
     "id": "oop-1",
     "subjectId": "oop",
-    "description": "Quais são os quatro pilares da Programação Orientada a Objetos (OOP)?",
+    "description": "What are the four pillars of Object-Oriented Programming (OOP)?",
     "alternatives": [
-      { "id": "A", "text": "Compilação, Execução, Depuração e Testes" },
-      { "id": "B", "text": "Encapsulamento, Herança, Polimorfismo e Abstração" },
-      { "id": "C", "text": "Classes, Objetos, Métodos e Atributos" },
-      { "id": "D", "text": "Variáveis, Loops, Condições e Funções" }
+      { "id": "A", "text": "Compilation, Execution, Debugging and Testing" },
+      { "id": "B", "text": "Encapsulation, Inheritance, Polymorphism and Abstraction" },
+      { "id": "C", "text": "Classes, Objects, Methods and Attributes" },
+      { "id": "D", "text": "Variables, Loops, Conditions and Functions" }
     ],
     "correctAlternative": "B",
-    "explanation": "Os quatro pilares da OOP são: Encapsulamento (proteger dados), Herança (reutilizar código), Polimorfismo (múltiplas formas) e Abstração (ocultar complexidade)."
+    "explanation": "The four pillars of OOP are: Encapsulation (protecting data), Inheritance (reusing code), Polymorphism (multiple forms), and Abstraction (hiding complexity)."
   },
   {
     "id": "oop-2",
     "subjectId": "oop",
-    "description": "O que é encapsulamento em OOP?",
+    "description": "What is encapsulation in OOP?",
     "alternatives": [
-      { "id": "A", "text": "A capacidade de uma classe herdar de outra" },
-      { "id": "B", "text": "A prática de ocultar os dados internos de um objeto, controlando o acesso através de métodos" },
-      { "id": "C", "text": "A criação de múltiplos objetos a partir de uma classe" },
-      { "id": "D", "text": "A capacidade de um método se chamar a si mesmo" }
+      { "id": "A", "text": "The ability of a class to inherit from another" },
+      { "id": "B", "text": "The practice of hiding an object's internal data, controlling access through methods" },
+      { "id": "C", "text": "Creating multiple objects from a class" },
+      { "id": "D", "text": "The ability of a method to call itself" }
     ],
     "correctAlternative": "B",
-    "explanation": "Encapsulamento é o princípio de proteger os dados de um objeto, tornando atributos privados e fornecendo métodos públicos (getters/setters) para acessá-los de forma controlada."
+    "explanation": "Encapsulation is the principle of protecting an object's data by making fields private and exposing public methods (getters/setters) for controlled access."
   },
   {
     "id": "oop-3",
     "subjectId": "oop",
-    "description": "O que é um objeto em OOP?",
+    "description": "What is an object in OOP?",
     "alternatives": [
-      { "id": "A", "text": "O mesmo que uma classe" },
-      { "id": "B", "text": "Uma instância concreta de uma classe, com estado e comportamento próprios" },
-      { "id": "C", "text": "Um método sem parâmetros" },
-      { "id": "D", "text": "Um arquivo de código Java" }
+      { "id": "A", "text": "The same thing as a class" },
+      { "id": "B", "text": "A concrete instance of a class, with its own state and behavior" },
+      { "id": "C", "text": "A method with no parameters" },
+      { "id": "D", "text": "A Java source file" }
     ],
     "correctAlternative": "B",
-    "explanation": "Um objeto é uma instância concreta de uma classe. Enquanto a classe é o molde, o objeto é a 'coisa real' criada a partir desse molde, com seus próprios valores de atributos."
+    "explanation": "An object is a concrete instance of a class. While the class is the blueprint, the object is the 'real thing' created from it, with its own attribute values."
   },
   {
     "id": "oop-4",
     "subjectId": "oop",
-    "description": "Em Java, qual palavra-chave é usada para que uma classe herde de outra?",
+    "description": "In Java, which keyword is used for a class to inherit from another?",
     "alternatives": [
       { "id": "A", "text": "implements" },
       { "id": "B", "text": "inherits" },
@@ -272,24 +272,290 @@
       { "id": "D", "text": "super" }
     ],
     "correctAlternative": "C",
-    "explanation": "A palavra-chave 'extends' é usada para herança em Java: class Cachorro extends Animal {}. Isso permite que Cachorro herde atributos e métodos da classe Animal.",
+    "explanation": "The 'extends' keyword is used for inheritance in Java: class Dog extends Animal {}. This allows Dog to inherit fields and methods from the Animal class.",
     "matter": {
       "type": "code",
-      "content": "class Animal {\n    String nome;\n    void emitirSom() { }\n}\n\nclass Cachorro extends Animal {\n    void emitirSom() {\n        System.out.println(\"Au au!\");\n    }\n}",
+      "content": "class Animal {\n    String name;\n    void makeSound() { }\n}\n\nclass Dog extends Animal {\n    void makeSound() {\n        System.out.println(\"Woof!\");\n    }\n}",
       "language": "java"
     }
   },
   {
     "id": "oop-5",
     "subjectId": "oop",
-    "description": "O que é abstração em OOP?",
+    "description": "What is abstraction in OOP?",
     "alternatives": [
-      { "id": "A", "text": "Esconder o código-fonte do desenvolvedor" },
-      { "id": "B", "text": "Criar objetos sem usar classes" },
-      { "id": "C", "text": "Expor apenas as funcionalidades essenciais de um objeto, ocultando detalhes de implementação" },
-      { "id": "D", "text": "Converter um tipo de dado em outro" }
+      { "id": "A", "text": "Hiding the source code from the developer" },
+      { "id": "B", "text": "Creating objects without using classes" },
+      { "id": "C", "text": "Exposing only the essential features of an object, hiding implementation details" },
+      { "id": "D", "text": "Converting one data type to another" }
     ],
     "correctAlternative": "C",
-    "explanation": "Abstração significa mostrar apenas o que é necessário e esconder a complexidade interna. Por exemplo, ao usar System.out.println(), você não precisa saber como ele funciona internamente."
+    "explanation": "Abstraction means showing only what is necessary and hiding internal complexity. For example, when you use System.out.println(), you don't need to know how it works internally."
+  },
+
+  {
+    "id": "csec-1",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What does the CIA Triad stand for in cybersecurity?",
+    "alternatives": [
+      { "id": "A", "text": "Cyber, Intelligence, Antivirus" },
+      { "id": "B", "text": "Confidentiality, Integrity, Availability" },
+      { "id": "C", "text": "Control, Identification, Access" },
+      { "id": "D", "text": "Compliance, Isolation, Authentication" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "The CIA Triad is the foundational model of information security: Confidentiality (only authorized users can access data), Integrity (data is accurate and unaltered), and Availability (systems are accessible when needed)."
+  },
+  {
+    "id": "csec-2",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is the difference between authentication and authorization?",
+    "alternatives": [
+      { "id": "A", "text": "They are the same thing" },
+      { "id": "B", "text": "Authentication verifies who you are; authorization determines what you can do" },
+      { "id": "C", "text": "Authorization verifies who you are; authentication determines what you can do" },
+      { "id": "D", "text": "Authentication only applies to passwords; authorization applies to all credentials" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Authentication answers 'Who are you?' (e.g., logging in with a password). Authorization answers 'What are you allowed to do?' (e.g., can you read this file or access this endpoint)."
+  },
+  {
+    "id": "csec-3",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is malware?",
+    "alternatives": [
+      { "id": "A", "text": "A type of hardware device used to intercept network traffic" },
+      { "id": "B", "text": "Any software intentionally designed to cause damage, steal data, or disrupt systems" },
+      { "id": "C", "text": "A security tool that monitors network activity" },
+      { "id": "D", "text": "An outdated or poorly written software program" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Malware (malicious software) is any program designed to harm, exploit, or otherwise compromise systems or data. It includes viruses, worms, trojans, ransomware, spyware, and more."
+  },
+  {
+    "id": "csec-4",
+    "subjectId": "cybersecurity-essentials",
+    "description": "A piece of malware that encrypts a victim's files and demands payment to restore access is called:",
+    "alternatives": [
+      { "id": "A", "text": "A worm" },
+      { "id": "B", "text": "Spyware" },
+      { "id": "C", "text": "Ransomware" },
+      { "id": "D", "text": "A trojan" }
+    ],
+    "correctAlternative": "C",
+    "explanation": "Ransomware encrypts the victim's files or locks their system and demands a ransom (usually in cryptocurrency) for the decryption key. Notable examples include WannaCry and LockBit."
+  },
+  {
+    "id": "csec-5",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is a phishing attack?",
+    "alternatives": [
+      { "id": "A", "text": "An attack that floods a server with traffic until it crashes" },
+      { "id": "B", "text": "A technique where attackers impersonate trusted entities to trick users into revealing sensitive information" },
+      { "id": "C", "text": "A method of intercepting encrypted network traffic" },
+      { "id": "D", "text": "An exploit that targets vulnerabilities in web browsers" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Phishing attackers pose as legitimate organizations (banks, tech companies, colleagues) via email, SMS, or fake websites to steal credentials, financial data, or install malware."
+  },
+  {
+    "id": "csec-6",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is social engineering in a cybersecurity context?",
+    "alternatives": [
+      { "id": "A", "text": "Using algorithms to analyze social media data" },
+      { "id": "B", "text": "Manipulating people psychologically to perform actions or divulge confidential information" },
+      { "id": "C", "text": "Building secure software through team collaboration" },
+      { "id": "D", "text": "Engineering firewalls to block social media platforms" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Social engineering exploits human psychology rather than technical vulnerabilities. Attackers build trust, create urgency, or impersonate authority figures to bypass security controls — humans are often the weakest link."
+  },
+  {
+    "id": "csec-7",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is the key difference between symmetric and asymmetric encryption?",
+    "alternatives": [
+      { "id": "A", "text": "Symmetric is faster but uses two different keys; asymmetric uses one key" },
+      { "id": "B", "text": "Symmetric uses one shared key for both encryption and decryption; asymmetric uses a key pair (public/private)" },
+      { "id": "C", "text": "Symmetric is used for data at rest; asymmetric is only for passwords" },
+      { "id": "D", "text": "There is no practical difference — both use the same number of keys" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Symmetric encryption (e.g., AES) uses the same key to encrypt and decrypt — fast but the key must be shared securely. Asymmetric encryption (e.g., RSA) uses a public key to encrypt and a private key to decrypt, enabling secure key exchange."
+  },
+  {
+    "id": "csec-8",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is hashing, and how does it differ from encryption?",
+    "alternatives": [
+      { "id": "A", "text": "Hashing is reversible; encryption is not" },
+      { "id": "B", "text": "Hashing produces a fixed-length digest that cannot be reversed; encryption can be decrypted with the right key" },
+      { "id": "C", "text": "They are the same — both use keys to transform data" },
+      { "id": "D", "text": "Hashing is only used for network packets; encryption is for files" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Hashing (e.g., SHA-256, bcrypt) is a one-way function — you cannot recover the original input from the hash. It's used for password storage and data integrity checks. Encryption is two-way — data can be decrypted with the correct key."
+  },
+  {
+    "id": "csec-9",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is the primary function of a firewall?",
+    "alternatives": [
+      { "id": "A", "text": "To encrypt all network traffic automatically" },
+      { "id": "B", "text": "To monitor and control incoming and outgoing network traffic based on security rules" },
+      { "id": "C", "text": "To scan files for malware before they are downloaded" },
+      { "id": "D", "text": "To assign IP addresses to devices on a network" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "A firewall acts as a gatekeeper between networks, allowing or blocking traffic based on predefined rules. It can be hardware-based, software-based, or both, and is a fundamental layer of network defense."
+  },
+  {
+    "id": "csec-10",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What does HTTPS provide over plain HTTP?",
+    "alternatives": [
+      { "id": "A", "text": "Faster page load times through compression" },
+      { "id": "B", "text": "Encrypted communication between the browser and server, ensuring confidentiality and integrity" },
+      { "id": "C", "text": "Automatic authentication of the user" },
+      { "id": "D", "text": "Protection against all types of web application attacks" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "HTTPS uses TLS (Transport Layer Security) to encrypt the connection between client and server, preventing eavesdropping and tampering. It also authenticates the server via digital certificates."
+  },
+  {
+    "id": "csec-11",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is Multi-Factor Authentication (MFA)?",
+    "alternatives": [
+      { "id": "A", "text": "Using multiple passwords for the same account" },
+      { "id": "B", "text": "A security mechanism requiring two or more verification factors from different categories to grant access" },
+      { "id": "C", "text": "Logging in from multiple devices simultaneously" },
+      { "id": "D", "text": "A type of encryption that uses multiple keys" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "MFA requires something you know (password), something you have (phone/token), and/or something you are (biometric). Even if a password is stolen, an attacker cannot log in without the second factor."
+  },
+  {
+    "id": "csec-12",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is the Principle of Least Privilege?",
+    "alternatives": [
+      { "id": "A", "text": "Giving all users administrator access to avoid support requests" },
+      { "id": "B", "text": "Granting users and systems only the minimum permissions necessary to perform their function" },
+      { "id": "C", "text": "Restricting all users from accessing any sensitive data" },
+      { "id": "D", "text": "Applying the lowest encryption standard that still meets compliance requirements" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "The Principle of Least Privilege (PoLP) minimizes risk by limiting access rights. A compromised account or misconfigured service can only do as much damage as its permissions allow — reducing the blast radius of an attack."
+  },
+  {
+    "id": "csec-13",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is a SQL Injection attack?",
+    "alternatives": [
+      { "id": "A", "text": "An attack that corrupts a database's physical storage" },
+      { "id": "B", "text": "An attack where malicious SQL code is inserted into an input field to manipulate the database" },
+      { "id": "C", "text": "An attack that overwhelms a database server with requests" },
+      { "id": "D", "text": "An attack targeting the SQL server's operating system" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "SQL injection occurs when user input is not properly sanitized and malicious SQL code is injected into queries. This can expose, modify, or delete data. Prevention: use parameterized queries / prepared statements.",
+    "matter": {
+      "type": "code",
+      "content": "-- Vulnerable query:\nSELECT * FROM users WHERE username = '\" + input + \"'\n\n-- Attack input:\n' OR '1'='1\n\n-- Resulting query (returns ALL users):\nSELECT * FROM users WHERE username = '' OR '1'='1'",
+      "language": "sql"
+    }
+  },
+  {
+    "id": "csec-14",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is a Man-in-the-Middle (MITM) attack?",
+    "alternatives": [
+      { "id": "A", "text": "An attack where the attacker sits between two communicating parties, intercepting and possibly altering their messages" },
+      { "id": "B", "text": "An attack where the attacker impersonates an administrator" },
+      { "id": "C", "text": "An attack that targets the middleware layer of an application" },
+      { "id": "D", "text": "An attack that floods a network switch with MAC addresses" }
+    ],
+    "correctAlternative": "A",
+    "explanation": "In a MITM attack, the attacker secretly intercepts communication between two parties who believe they are communicating directly. This can allow credential theft, session hijacking, or data manipulation. HTTPS and certificate pinning help prevent it."
+  },
+  {
+    "id": "csec-15",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is a DDoS attack?",
+    "alternatives": [
+      { "id": "A", "text": "An attack that steals data by decrypting network packets" },
+      { "id": "B", "text": "An attack that uses many compromised systems to overwhelm a target with traffic, making it unavailable" },
+      { "id": "C", "text": "An attack that deletes data from a distributed database" },
+      { "id": "D", "text": "An attack that installs malware on multiple devices simultaneously" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "A Distributed Denial of Service (DDoS) attack floods a target (website, server, network) with traffic from many sources (often a botnet) to exhaust its resources and make it unavailable to legitimate users — attacking the Availability pillar of the CIA Triad."
+  },
+  {
+    "id": "csec-16",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is a zero-day vulnerability?",
+    "alternatives": [
+      { "id": "A", "text": "A vulnerability that has been patched within zero days of discovery" },
+      { "id": "B", "text": "A flaw in software that is unknown to the vendor and has no available patch" },
+      { "id": "C", "text": "A vulnerability that only affects systems with zero security controls" },
+      { "id": "D", "text": "A new vulnerability introduced when code is deployed at midnight" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "A zero-day vulnerability is a software flaw that is unknown to the developer or vendor — they have had 'zero days' to fix it. Attackers who discover zero-days have a significant advantage since no patch exists yet."
+  },
+  {
+    "id": "csec-17",
+    "subjectId": "cybersecurity-essentials",
+    "description": "Which of the following is considered the BEST practice for creating strong passwords?",
+    "alternatives": [
+      { "id": "A", "text": "Using a short word with numbers substituting letters, like 'p4ssw0rd'" },
+      { "id": "B", "text": "Reusing the same complex password across all accounts for consistency" },
+      { "id": "C", "text": "Using long, random, unique passphrases or passwords managed by a password manager" },
+      { "id": "D", "text": "Changing your password every 30 days while keeping a similar structure" }
+    ],
+    "correctAlternative": "C",
+    "explanation": "Length and uniqueness matter most. Long random passphrases are harder to crack than short complex passwords. A password manager generates and stores unique credentials per account, eliminating reuse — the most dangerous password habit."
+  },
+  {
+    "id": "csec-18",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What does 'defense in depth' mean in cybersecurity?",
+    "alternatives": [
+      { "id": "A", "text": "Using the most advanced firewall available as the sole security measure" },
+      { "id": "B", "text": "Applying multiple, overlapping layers of security controls so that if one fails, others still protect the system" },
+      { "id": "C", "text": "Keeping all security configurations secret from developers" },
+      { "id": "D", "text": "Focusing all security resources on protecting the network perimeter" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Defense in depth is a layered security strategy: firewalls, intrusion detection, encryption, access controls, security training, and monitoring all work together. No single control is sufficient; redundancy creates resilience."
+  },
+  {
+    "id": "csec-19",
+    "subjectId": "cybersecurity-essentials",
+    "description": "What is the purpose of a VPN (Virtual Private Network)?",
+    "alternatives": [
+      { "id": "A", "text": "To make your internet connection faster" },
+      { "id": "B", "text": "To create an encrypted tunnel for your traffic, masking your IP and protecting data in transit" },
+      { "id": "C", "text": "To permanently delete files so they cannot be recovered" },
+      { "id": "D", "text": "To scan your device for malware in real time" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "A VPN encrypts your internet traffic and routes it through a server, hiding your IP address and protecting your data from eavesdroppers — especially important on untrusted public Wi-Fi. For organizations, VPNs also provide secure remote access to internal networks."
+  },
+  {
+    "id": "csec-20",
+    "subjectId": "cybersecurity-essentials",
+    "description": "Why is it important to keep software and operating systems up to date?",
+    "alternatives": [
+      { "id": "A", "text": "Updates improve the user interface but have no impact on security" },
+      { "id": "B", "text": "Updates often include patches for known vulnerabilities that attackers actively exploit" },
+      { "id": "C", "text": "Outdated software is generally more stable and secure than newer versions" },
+      { "id": "D", "text": "Software updates are only necessary for antivirus programs" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "Unpatched software is one of the most common attack vectors. When a vulnerability is disclosed, attackers race to exploit systems that haven't yet applied the patch. Regular updates are one of the simplest and most effective security measures."
   }
 ]
