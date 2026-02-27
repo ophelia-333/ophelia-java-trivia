@@ -208,7 +208,8 @@ export default function QuizClient({ subject, questions }: Props) {
 
             {/* Alternatives */}
             <div className="flex flex-col gap-3">
-              {shuffledAlternatives[currentIndex].map((alt) => {
+              {shuffledAlternatives[currentIndex].map((alt, displayIndex) => {
+                const displayLabel = (["A", "B", "C", "D"] as const)[displayIndex];
                 const isSelected = effectiveSelected === alt.id;
                 const isCorrectAlt = alt.id === currentQuestion.correctAlternative;
 
@@ -241,7 +242,7 @@ export default function QuizClient({ subject, questions }: Props) {
                     }}
                   >
                     <span className="font-bold text-sm mt-0.5 min-w-[20px]">
-                      {alt.id}.
+                      {displayLabel}.
                     </span>
                     <span className="text-sm leading-relaxed">{alt.text}</span>
                   </div>
@@ -260,7 +261,13 @@ export default function QuizClient({ subject, questions }: Props) {
                 <div>
                   <p className="font-semibold">
                     Correct answer:{" "}
-                    <span className="uppercase">{currentQuestion.correctAlternative}</span>
+                    <span className="uppercase">
+                      {(["A", "B", "C", "D"] as const)[
+                        shuffledAlternatives[currentIndex].findIndex(
+                          (a) => a.id === currentQuestion.correctAlternative
+                        )
+                      ]}
+                    </span>
                   </p>
                   <p className="text-sm opacity-90 mt-1">{currentQuestion.explanation}</p>
                 </div>
