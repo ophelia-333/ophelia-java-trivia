@@ -70,28 +70,28 @@ export default function QuizClient({ subject, questions }: Props) {
           <div className="mb-6 relative w-64 h-64 mx-auto">
             <Image
               src={passed ? "/ophelia-happy.jpg" : "/ophelia-sad.jpg"}
-              alt={passed ? "Ophelia comemorando" : "Ophelia decepcionada"}
+              alt={passed ? "Ophelia celebrating" : "Ophelia disappointed"}
               fill
               className="object-contain rounded-2xl"
             />
           </div>
 
           <h2 className="text-3xl font-bold mb-2">
-            {passed ? "Parabéns! 🎉" : "Não foi dessa vez..."}
+            {passed ? "Well done! 🎉" : "Not this time..."}
           </h2>
 
           <p className="text-base-content/60 text-lg mb-6">
-            Você acertou{" "}
+            You got{" "}
             <span className="font-bold text-base-content">
               {correctCount} de {totalQuestions}
             </span>{" "}
-            questões em{" "}
+            questions in{" "}
             <span className="font-semibold">{subject.title}</span>.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/" className="btn btn-ghost">
-              ← Escolher outro tema
+              ← Choose another topic
             </Link>
             <button
               className="btn btn-primary"
@@ -102,7 +102,7 @@ export default function QuizClient({ subject, questions }: Props) {
                 setPhase("quiz");
               }}
             >
-              Tentar novamente
+              Try again
             </button>
           </div>
         </div>
@@ -122,7 +122,7 @@ export default function QuizClient({ subject, questions }: Props) {
         {/* Back link + subject title */}
         <div className="mb-6 flex items-center gap-2 text-sm text-base-content/50">
           <Link href="/" className="hover:text-base-content transition-colors">
-            ← Início
+            ← Home
           </Link>
           <span>/</span>
           <span className="text-base-content">{subject.title}</span>
@@ -148,7 +148,7 @@ export default function QuizClient({ subject, questions }: Props) {
                 className={btnClass}
                 onClick={() => navigateToQuestion(i)}
                 disabled={isFuture}
-                aria-label={`Questão ${i + 1}`}
+                aria-label={`Question ${i + 1}`}
               >
                 {i + 1}
               </button>
@@ -170,7 +170,7 @@ export default function QuizClient({ subject, questions }: Props) {
                 ) : currentQuestion.matter.type === "image" ? (
                   <Image
                     src={currentQuestion.matter.content}
-                    alt="Conteúdo da questão"
+                    alt="Question content"
                     width={600}
                     height={300}
                     className="rounded-lg w-full object-cover"
@@ -241,7 +241,7 @@ export default function QuizClient({ subject, questions }: Props) {
                 </svg>
                 <div>
                   <p className="font-semibold">
-                    Resposta correta:{" "}
+                    Correct answer:{" "}
                     <span className="uppercase">{currentQuestion.correctAlternative}</span>
                   </p>
                   <p className="text-sm opacity-90 mt-1">{currentQuestion.explanation}</p>
@@ -254,7 +254,7 @@ export default function QuizClient({ subject, questions }: Props) {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                <span>Correto!</span>
+                <span>Correct!</span>
               </div>
             )}
 
@@ -266,11 +266,11 @@ export default function QuizClient({ subject, questions }: Props) {
                   disabled={!selectedOption}
                   onClick={handleSubmit}
                 >
-                  Verificar
+                  Check
                 </button>
               ) : (
                 <button className="btn btn-primary" onClick={handleNext}>
-                  {isLastQuestion ? "Ver Resultado →" : "Próxima →"}
+                  {isLastQuestion ? "See Results →" : "Next →"}
                 </button>
               )}
             </div>
@@ -279,7 +279,7 @@ export default function QuizClient({ subject, questions }: Props) {
 
         {/* Progress */}
         <div className="mt-4 text-center text-sm text-base-content/40">
-          Questão {currentIndex + 1} de {totalQuestions}
+          Question {currentIndex + 1} of {totalQuestions}
         </div>
       </div>
     </main>

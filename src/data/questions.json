@@ -692,5 +692,161 @@
     ],
     "correctAlternative": "B",
     "explanation": "AI lowers the barrier and increases the scale of attacks: LLMs generate hyper-personalized phishing emails; AI automates vulnerability discovery; generative models create polymorphic malware that evades signature-based detection. Defenders and attackers are both leveraging AI — offense currently has the speed advantage."
+  },
+
+  {
+    "id": "linux-1",
+    "subjectId": "linux-sysadmin",
+    "description": "What does the command `chmod 755 script.sh` do?",
+    "alternatives": [
+      { "id": "A", "text": "Gives the owner read/write/execute, group read/execute, others read/execute" },
+      { "id": "B", "text": "Gives everyone full read/write/execute permissions" },
+      { "id": "C", "text": "Removes all permissions from the file" },
+      { "id": "D", "text": "Gives the owner read/write, group read only, others no permissions" }
+    ],
+    "correctAlternative": "A",
+    "explanation": "chmod uses octal notation: 7=rwx (4+2+1), 5=r-x (4+1), 5=r-x. So 755 means owner gets full rwx, group and others get read+execute only. The standard permission for executable scripts.",
+    "matter": {
+      "type": "code",
+      "content": "chmod 755 script.sh\n# owner: rwx (7)\n# group: r-x (5)\n# others: r-x (5)",
+      "language": "bash"
+    }
+  },
+  {
+    "id": "linux-2",
+    "subjectId": "linux-sysadmin",
+    "description": "What is the difference between a hard link and a symbolic (soft) link in Linux?",
+    "alternatives": [
+      { "id": "A", "text": "Hard links can span filesystems; symbolic links cannot" },
+      { "id": "B", "text": "A hard link is a direct reference to the inode; a symbolic link is a pointer to a file path" },
+      { "id": "C", "text": "Symbolic links are faster to access than hard links" },
+      { "id": "D", "text": "Hard links can only be created for directories; symbolic links are for files only" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "A hard link points directly to the file's inode — if the original file is deleted, the hard link still works. A symbolic link points to a path; if the original is deleted, the symlink breaks. Hard links cannot span filesystems or link to directories (usually)."
+  },
+  {
+    "id": "linux-3",
+    "subjectId": "linux-sysadmin",
+    "description": "Which command shows currently running processes with real-time CPU and memory usage?",
+    "alternatives": [
+      { "id": "A", "text": "ps aux" },
+      { "id": "B", "text": "ls -la" },
+      { "id": "C", "text": "top" },
+      { "id": "D", "text": "df -h" }
+    ],
+    "correctAlternative": "C",
+    "explanation": "`top` (and its improved version `htop`) provides a real-time, interactive view of running processes including CPU%, memory%, PID, and more. `ps aux` is a static snapshot. `df -h` shows disk usage. `ls -la` lists directory contents."
+  },
+  {
+    "id": "linux-4",
+    "subjectId": "linux-sysadmin",
+    "description": "What does the `/etc/passwd` file contain, and is it readable by all users?",
+    "alternatives": [
+      { "id": "A", "text": "Encrypted user passwords — readable only by root" },
+      { "id": "B", "text": "User account information (username, UID, home dir, shell) — world-readable by design" },
+      { "id": "C", "text": "Network configuration for each user — readable only by root" },
+      { "id": "D", "text": "Hashed passwords — readable by all users" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "`/etc/passwd` stores user account info (username, UID, GID, home directory, shell) and is world-readable. Passwords were historically stored here but are now in `/etc/shadow`, which is readable only by root — a critical security improvement."
+  },
+  {
+    "id": "linux-5",
+    "subjectId": "linux-sysadmin",
+    "description": "What does `sudo` do, and why is it preferred over logging in directly as root?",
+    "alternatives": [
+      { "id": "A", "text": "sudo switches your user account permanently to root" },
+      { "id": "B", "text": "sudo allows a permitted user to run a specific command as root, with logging — reducing exposure vs a persistent root session" },
+      { "id": "C", "text": "sudo encrypts commands before sending them to the kernel" },
+      { "id": "D", "text": "sudo is only available on Debian-based distributions" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "sudo grants temporary elevated privileges for a single command, logs every invocation, and requires the user's own password. Logging in as root persistently is dangerous: any mistake or compromised session has full system access with no audit trail."
+  },
+  {
+    "id": "linux-6",
+    "subjectId": "linux-sysadmin",
+    "description": "Which command would you use to view the last 50 lines of a log file in real time as it is written?",
+    "alternatives": [
+      { "id": "A", "text": "cat /var/log/syslog | head -50" },
+      { "id": "B", "text": "tail -f -n 50 /var/log/syslog" },
+      { "id": "C", "text": "grep -n 50 /var/log/syslog" },
+      { "id": "D", "text": "watch /var/log/syslog" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "`tail -f` follows a file as it grows, printing new lines in real time — essential for monitoring logs during deployments or incident response. `-n 50` shows the last 50 lines first. This is one of the most-used sysadmin commands.",
+    "matter": {
+      "type": "code",
+      "content": "tail -f -n 50 /var/log/syslog\n# or for systemd logs:\njournalctl -fu nginx",
+      "language": "bash"
+    }
+  },
+  {
+    "id": "linux-7",
+    "subjectId": "linux-sysadmin",
+    "description": "What does the `cron` daemon do in Linux?",
+    "alternatives": [
+      { "id": "A", "text": "Manages user authentication and session timeouts" },
+      { "id": "B", "text": "Schedules and executes commands or scripts automatically at specified times or intervals" },
+      { "id": "C", "text": "Monitors disk usage and sends alerts when space is low" },
+      { "id": "D", "text": "Handles background compilation of system updates" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "cron is a time-based job scheduler. You define jobs in a crontab file using a 5-field time expression (minute, hour, day, month, weekday). It's used for backups, log rotation, health checks, and any recurring task.",
+    "matter": {
+      "type": "code",
+      "content": "# crontab -e\n# min hour day month weekday command\n  0   2   *    *      *    /usr/bin/backup.sh\n# Runs backup.sh every day at 2:00 AM",
+      "language": "bash"
+    }
+  },
+  {
+    "id": "linux-8",
+    "subjectId": "linux-sysadmin",
+    "description": "What is the purpose of `ssh-keygen` and why is key-based SSH authentication preferred over passwords?",
+    "alternatives": [
+      { "id": "A", "text": "It generates system encryption keys for disk-level security; passwords are more convenient" },
+      { "id": "B", "text": "It creates a public/private key pair for SSH authentication — more secure than passwords because keys are long, random, and not susceptible to brute force or phishing" },
+      { "id": "C", "text": "It generates temporary passwords for SSH sessions" },
+      { "id": "D", "text": "It encrypts files before transferring them over SSH" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "SSH key pairs use asymmetric cryptography: the public key lives on the server, the private key stays on your machine. No secret is ever transmitted. Keys are mathematically infeasible to brute-force and immune to password phishing — the industry standard for server access."
+  },
+  {
+    "id": "linux-9",
+    "subjectId": "linux-sysadmin",
+    "description": "What does `ps aux | grep nginx` do?",
+    "alternatives": [
+      { "id": "A", "text": "Installs nginx and starts it" },
+      { "id": "B", "text": "Lists all running processes and filters for lines containing 'nginx'" },
+      { "id": "C", "text": "Restarts the nginx service" },
+      { "id": "D", "text": "Shows nginx's configuration file contents" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "`ps aux` lists all running processes with details (user, PID, CPU, mem). The `|` pipe sends that output to `grep nginx`, which filters for lines matching 'nginx'. This is a fundamental Linux pattern: chain simple tools with pipes to answer specific questions.",
+    "matter": {
+      "type": "code",
+      "content": "ps aux | grep nginx\n# user     PID  %CPU %MEM  ... nginx: master process\n# user     PID  %CPU %MEM  ... nginx: worker process",
+      "language": "bash"
+    }
+  },
+  {
+    "id": "linux-10",
+    "subjectId": "linux-sysadmin",
+    "description": "What is a Linux package manager, and which one does Ubuntu/Debian use?",
+    "alternatives": [
+      { "id": "A", "text": "A tool for compressing files; Ubuntu uses tar" },
+      { "id": "B", "text": "A system for installing, updating, and removing software; Ubuntu/Debian uses apt" },
+      { "id": "C", "text": "A filesystem management utility; Ubuntu uses fdisk" },
+      { "id": "D", "text": "A process scheduler; Ubuntu uses systemd" }
+    ],
+    "correctAlternative": "B",
+    "explanation": "`apt` (Advanced Package Tool) manages software on Debian/Ubuntu systems: `apt install`, `apt update`, `apt upgrade`, `apt remove`. It resolves dependencies automatically. Red Hat/CentOS uses `yum`/`dnf`. Arch uses `pacman`. Keeping packages updated via the package manager is a core sysadmin security practice.",
+    "matter": {
+      "type": "code",
+      "content": "sudo apt update          # refresh package index\nsudo apt upgrade         # install available updates\nsudo apt install nginx   # install a package\nsudo apt remove nginx    # remove a package",
+      "language": "bash"
+    }
   }
 ]

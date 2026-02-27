@@ -34,5 +34,11 @@
     "topicId": "cybersecurity",
     "title": "AI & Cybersecurity",
     "description": "Security risks, attacks, and defenses specific to AI and machine learning systems"
+  },
+  {
+    "id": "linux-sysadmin",
+    "topicId": "cybersecurity",
+    "title": "Linux & SysAdmin",
+    "description": "Linux fundamentals, permissions, process management, and system administration essentials"
   }
 ]
