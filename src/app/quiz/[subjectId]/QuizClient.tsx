@@ -1,9 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Question, Subject } from "@/types";
+
+function shuffleArray<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
 interface Answer {
   selected: "A" | "B" | "C" | "D";
@@ -23,6 +32,14 @@ export default function QuizClient({ subject, questions }: Props) {
   const [selectedOption, setSelectedOption] = useState<"A" | "B" | "C" | "D" | null>(null);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
   const [phase, setPhase] = useState<Phase>("quiz");
+  const [shuffleKey, setShuffleKey] = useState(0);
+
+  // Shuffle alternatives once per quiz attempt; stable across navigation
+  const shuffledAlternatives = useMemo(
+    () => questions.map((q) => shuffleArray(q.alternatives)),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [questions, shuffleKey]
+  );
 
   const currentQuestion = questions[currentIndex];
   const currentAnswer = answers[currentQuestion?.id];
@@ -100,6 +117,7 @@ export default function QuizClient({ subject, questions }: Props) {
                 setCurrentIndex(0);
                 setSelectedOption(null);
                 setPhase("quiz");
+                setShuffleKey((k) => k + 1);
               }}
             >
               Try again
@@ -190,7 +208,7 @@ export default function QuizClient({ subject, questions }: Props) {
 
             {/* Alternatives */}
             <div className="flex flex-col gap-3">
-              {currentQuestion.alternatives.map((alt) => {
+              {shuffledAlternatives[currentIndex].map((alt) => {
                 const isSelected = effectiveSelected === alt.id;
                 const isCorrectAlt = alt.id === currentQuestion.correctAlternative;
 
