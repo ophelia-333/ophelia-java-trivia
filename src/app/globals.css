@@ -43,3 +43,21 @@
   --radius-field: 0.5rem;
   --radius-box: 1rem;
 }
+
+@keyframes ophelia-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes ophelia-glow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.12); }
+}
+
+.ophelia-float {
+  animation: ophelia-float 4s ease-in-out infinite;
+}
+
+.ophelia-glow {
+  animation: ophelia-glow 4s ease-in-out infinite;
+}

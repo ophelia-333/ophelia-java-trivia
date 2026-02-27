@@ -28,5 +28,11 @@
     "topicId": "cybersecurity",
     "title": "Cybersecurity Essentials",
     "description": "Core concepts in cybersecurity: threats, defenses, and best practices"
+  },
+  {
+    "id": "ai-security",
+    "topicId": "cybersecurity",
+    "title": "AI & Cybersecurity",
+    "description": "Security risks, attacks, and defenses specific to AI and machine learning systems"
   }
 ]

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getTopics } from "@/services/topicService";
 
 const topicIcons: Record<string, string> = {
@@ -10,13 +11,24 @@ export default function HomePage() {
   const topics = getTopics();
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12">
+    <main className="min-h-screen flex flex-col items-center px-4 py-12">
       <div className="max-w-2xl w-full">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold mb-2">Ophelia&apos;s Quizzes</h1>
-          <p className="text-base-content/60 text-lg">
-            Pick a topic to get started
+
+        {/* Hero — Ophelia professor */}
+        <div className="flex flex-col items-center mb-12">
+          <div className="ophelia-float relative w-56 h-56 sm:w-72 sm:h-72 mb-6">
+            <div className="absolute inset-0 rounded-full bg-primary/20 blur-2xl ophelia-glow" />
+            <Image
+              src="/ophelia-professor.jpg"
+              alt="Ophelia"
+              fill
+              className="object-cover rounded-2xl ring-2 ring-primary/60 relative z-10"
+              priority
+            />
+          </div>
+          <h1 className="text-4xl font-bold mb-2 text-center">Ophelia&apos;s Quizzes</h1>
+          <p className="text-base-content/60 text-lg text-center">
+            Pick a topic. Prove you know your stuff.
           </p>
         </div>
 
@@ -46,6 +58,7 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+
     </main>
   );
 }
