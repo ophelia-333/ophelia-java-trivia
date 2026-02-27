@@ -1,2 +1,45 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "ophelia";
+  default: true;
+  color-scheme: dark;
+
+  /* Backgrounds — near-black with a cold undertone */
+  --color-base-100: oklch(13% 0.025 268);
+  --color-base-200: oklch(17% 0.025 268);
+  --color-base-300: oklch(22% 0.03 268);
+  --color-base-content: oklch(88% 0.015 60);
+
+  /* Primary — crimson red (Ophelia's eye color) */
+  --color-primary: oklch(52% 0.22 22);
+  --color-primary-content: oklch(98% 0.005 0);
+
+  /* Secondary — deep twilight purple */
+  --color-secondary: oklch(40% 0.16 292);
+  --color-secondary-content: oklch(96% 0.005 0);
+
+  /* Accent — blood red */
+  --color-accent: oklch(47% 0.20 14);
+  --color-accent-content: oklch(98% 0.005 0);
+
+  /* Neutral */
+  --color-neutral: oklch(26% 0.025 268);
+  --color-neutral-content: oklch(82% 0.01 0);
+
+  /* State colors */
+  --color-info: oklch(57% 0.15 232);
+  --color-info-content: oklch(98% 0.005 0);
+  --color-success: oklch(57% 0.17 148);
+  --color-success-content: oklch(98% 0.005 0);
+  --color-warning: oklch(67% 0.20 78);
+  --color-warning-content: oklch(14% 0.01 0);
+  --color-error: oklch(52% 0.22 22);
+  --color-error-content: oklch(98% 0.005 0);
+
+  /* Radius */
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+}

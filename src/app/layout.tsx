@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" data-theme="dim">
+    <html lang="pt-BR" data-theme="ophelia">
       <body className="min-h-screen bg-base-100 text-base-content">
         <Header />
         {children}
