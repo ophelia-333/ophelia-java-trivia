@@ -7,6 +7,10 @@ export function getSubjects(): Subject[] {
   return subjects;
 }
 
+export function getSubjectsByTopic(topicId: string): Subject[] {
+  return subjects.filter((s) => s.topicId === topicId);
+}
+
 export function getSubjectById(id: string): Subject | undefined {
   return subjects.find((s) => s.id === id);
 }

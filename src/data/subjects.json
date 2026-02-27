@@ -1,22 +1,32 @@
 [
   {
     "id": "classes",
-    "title": "Classes em Java",
-    "description": "Aprenda sobre a estrutura e criação de classes em Java"
+    "topicId": "java",
+    "title": "Classes in Java",
+    "description": "Learn about the structure and creation of classes in Java"
   },
   {
     "id": "return",
-    "title": "Palavra-chave return",
-    "description": "Entenda o propósito e uso da palavra-chave return em Java"
+    "topicId": "java",
+    "title": "The return Keyword",
+    "description": "Understand the purpose and usage of the return keyword in Java"
   },
   {
     "id": "void",
-    "title": "Palavra-chave void",
-    "description": "Descubra quando e por que usar void em métodos Java"
+    "topicId": "java",
+    "title": "The void Keyword",
+    "description": "Discover when and why to use void in Java methods"
   },
   {
     "id": "oop",
-    "title": "Conceitos de OOP",
-    "description": "Conceitos iniciais de Programação Orientada a Objetos"
+    "topicId": "java",
+    "title": "OOP Concepts",
+    "description": "Foundational Object-Oriented Programming concepts"
+  },
+  {
+    "id": "cybersecurity-essentials",
+    "topicId": "cybersecurity",
+    "title": "Cybersecurity Essentials",
+    "description": "Core concepts in cybersecurity: threats, defenses, and best practices"
   }
 ]

@@ -20,7 +20,7 @@ export default function Header() {
 
         {/* Title */}
         <Link href="/" className="font-bold text-lg leading-tight hover:text-primary transition-colors">
-          Ophelia&apos;s Java Trivia
+          Ophelia&apos;s Quizzes
         </Link>
       </div>
     </header>

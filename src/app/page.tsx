@@ -1,38 +1,44 @@
 import Link from "next/link";
-import { getSubjects } from "@/services/subjectService";
+import { getTopics } from "@/services/topicService";
+
+const topicIcons: Record<string, string> = {
+  java: "☕",
+  cybersecurity: "🔒",
+};
 
 export default function HomePage() {
-  const subjects = getSubjects();
+  const topics = getTopics();
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12">
       <div className="max-w-2xl w-full">
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold mb-2">
-            Ophelia&apos;s Java Trivia
-          </h1>
+          <h1 className="text-4xl font-bold mb-2">Ophelia&apos;s Quizzes</h1>
           <p className="text-base-content/60 text-lg">
-            Selecione um tema para começar o quiz
+            Pick a topic to get started
           </p>
         </div>
 
-        {/* Subject cards */}
+        {/* Topic cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {subjects.map((subject) => (
+          {topics.map((topic) => (
             <Link
-              key={subject.id}
-              href={`/quiz/${subject.id}`}
+              key={topic.id}
+              href={`/topic/${topic.id}`}
               className="card bg-base-200 hover:bg-base-300 border border-base-300 hover:border-primary transition-all duration-200 cursor-pointer"
             >
               <div className="card-body">
-                <h2 className="card-title text-lg">{subject.title}</h2>
+                <h2 className="card-title text-lg">
+                  <span className="text-2xl">{topicIcons[topic.id] ?? "📚"}</span>
+                  {topic.title}
+                </h2>
                 <p className="text-base-content/60 text-sm">
-                  {subject.description}
+                  {topic.description}
                 </p>
                 <div className="card-actions justify-end mt-2">
                   <span className="badge badge-primary badge-outline">
-                    Iniciar →
+                    Explore →
                   </span>
                 </div>
               </div>

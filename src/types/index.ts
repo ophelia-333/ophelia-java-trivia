@@ -21,8 +21,15 @@ export interface Question {
   matter?: Matter;
 }
 
+export interface Topic {
+  id: string;
+  title: string;
+  description: string;
+}
+
 export interface Subject {
   id: string;
+  topicId: string;
   title: string;
   description: string;
 }

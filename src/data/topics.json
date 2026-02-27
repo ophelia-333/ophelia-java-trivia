@@ -1,0 +1,12 @@
+[
+  {
+    "id": "java",
+    "title": "Java",
+    "description": "Core Java concepts, OOP principles, and language fundamentals"
+  },
+  {
+    "id": "cybersecurity",
+    "title": "Cybersecurity",
+    "description": "Security concepts, threat models, and defensive practices"
+  }
+]
